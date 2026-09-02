@@ -5,14 +5,13 @@
   const intro = document.getElementById('introOverlay');
   const body = document.body;
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const skipIntro = reduceMotion || sessionStorage.getItem('wg_intro_seen') === '1';
 
   function endIntro() {
     body.classList.remove('intro-active');
     if (intro) intro.classList.add('intro--hidden');
   }
 
-  if (!intro || skipIntro) {
+  if (!intro || reduceMotion) {
     endIntro();
   } else {
     const EXIT_AT = 2950;
@@ -21,7 +20,6 @@
       intro.classList.add('intro--exit');
       window.setTimeout(endIntro, REMOVE_AFTER_EXIT);
     }, EXIT_AT);
-    sessionStorage.setItem('wg_intro_seen', '1');
   }
 
   /* ---------- Header scroll state ---------- */
