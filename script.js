@@ -15,8 +15,8 @@
   if (!intro || skipIntro) {
     endIntro();
   } else {
-    const EXIT_AT = 2450;
-    const REMOVE_AFTER_EXIT = 1050;
+    const EXIT_AT = 2950;
+    const REMOVE_AFTER_EXIT = 1250;
     window.setTimeout(() => {
       intro.classList.add('intro--exit');
       window.setTimeout(endIntro, REMOVE_AFTER_EXIT);
