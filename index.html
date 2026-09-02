@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Glowing — Création de sites internet</title>
+<meta name="description" content="Web Glowing conçoit des sites web modernes, rapides et sur mesure pour les entreprises qui veulent briller en ligne.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%236a1f2b%22/><text x=%2250%22 y=%2266%22 font-size=%2255%22 fill=%22white%22 text-anchor=%22middle%22 font-family=%22serif%22>W</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="intro-active">
+
+<div class="intro" id="introOverlay" aria-hidden="true">
+  <div class="intro-panel intro-panel-left"></div>
+  <div class="intro-panel intro-panel-right"></div>
+  <div class="intro-flash"></div>
+  <div class="intro-content">
+    <h1 class="intro-logo">
+      <span class="intro-letter" style="--i:0">W</span><span class="intro-letter" style="--i:1">E</span><span class="intro-letter" style="--i:2">B</span><span class="intro-gap"></span><span class="intro-letter" style="--i:4">G</span><span class="intro-letter" style="--i:5">L</span><span class="intro-letter" style="--i:6">O</span><span class="intro-letter" style="--i:7">W</span><span class="intro-letter" style="--i:8">I</span><span class="intro-letter" style="--i:9">N</span><span class="intro-letter" style="--i:10">G</span>
+    </h1>
+    <span class="intro-line"></span>
+    <p class="intro-tagline">Studio de création de sites internet</p>
+  </div>
+</div>
+
+<div class="glow-cursor" id="glowCursor"></div>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#top" class="logo">WEB<span>GLOWING</span></a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">Studio</a>
+      <a href="#testimonials">Avis</a>
+      <a href="#contact" class="nav-cta">Démarrer un projet</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    <div class="container hero-inner">
+      <p class="eyebrow">Studio de création de sites internet</p>
+      <h1>Des sites web qui font <span class="text-glow">briller</span> votre marque.</h1>
+      <p class="hero-lead">
+        Nous concevons et développons des sites vitrines, e-commerce et applications web sur mesure —
+        alliant design soigné, performance et résultats concrets pour votre activité.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Discutons de votre projet</a>
+        <a href="#portfolio" class="btn btn-ghost">Voir nos réalisations</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">40+</span><span class="stat-label">Projets livrés</span></div>
+        <div class="stat"><span class="stat-num">98%</span><span class="stat-label">Clients satisfaits</span></div>
+        <div class="stat"><span class="stat-num">5</span><span class="stat-label">Ans d'expérience</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="logos">
+    <div class="container">
+      <p class="logos-title">Ils nous ont fait confiance</p>
+      <div class="logos-row">
+        <span>NOVA&nbsp;RETAIL</span>
+        <span>ATLAS&nbsp;IMMO</span>
+        <span>LUMEN&nbsp;CAFÉ</span>
+        <span>ORBIT&nbsp;FITNESS</span>
+        <span>PIXEL&nbsp;&amp;&nbsp;CO</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section services">
+    <div class="container">
+      <p class="section-eyebrow">Ce que nous faisons</p>
+      <h2 class="section-title">Des services pensés pour votre croissance</h2>
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-icon">🖥️</div>
+          <h3>Site vitrine</h3>
+          <p>Un site élégant et rapide qui présente votre activité et convertit vos visiteurs en clients.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon">🛒</div>
+          <h3>E-commerce</h3>
+          <p>Boutique en ligne sur mesure, paiement sécurisé et gestion simple de vos produits.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon">🎨</div>
+          <h3>UI / UX Design</h3>
+          <p>Une expérience utilisateur pensée pour votre audience, du wireframe à l'interface finale.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon">⚡</div>
+          <h3>Performance &amp; SEO</h3>
+          <p>Sites optimisés pour la vitesse et le référencement afin d'être trouvé par vos clients.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon">🔧</div>
+          <h3>Refonte de site</h3>
+          <p>Modernisez un site existant : design, contenu et technique repensés sans repartir de zéro.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon">🛠️</div>
+          <h3>Maintenance</h3>
+          <p>Mises à jour, sécurité et support continu pour un site toujours fiable.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="section portfolio">
+    <div class="container">
+      <p class="section-eyebrow">Nos réalisations</p>
+      <h2 class="section-title">Une sélection de projets récents</h2>
+      <div class="portfolio-grid">
+        <article class="project-card grad-1">
+          <div class="project-visual"><span>Nova Retail</span></div>
+          <div class="project-info">
+            <h3>Nova Retail</h3>
+            <p>Site e-commerce mode — refonte complète &amp; +65% de conversions.</p>
+            <div class="tags"><span>E-commerce</span><span>UI/UX</span></div>
+          </div>
+        </article>
+        <article class="project-card grad-2">
+          <div class="project-visual"><span>Atlas Immo</span></div>
+          <div class="project-info">
+            <h3>Atlas Immo</h3>
+            <p>Vitrine immobilière avec recherche de biens et prise de rendez-vous.</p>
+            <div class="tags"><span>Site vitrine</span><span>SEO</span></div>
+          </div>
+        </article>
+        <article class="project-card grad-3">
+          <div class="project-visual"><span>Lumen Café</span></div>
+          <div class="project-info">
+            <h3>Lumen Café</h3>
+            <p>Site événementiel et menu en ligne pour une chaîne de cafés.</p>
+            <div class="tags"><span>Branding</span><span>Site vitrine</span></div>
+          </div>
+        </article>
+        <article class="project-card grad-4">
+          <div class="project-visual"><span>Orbit Fitness</span></div>
+          <div class="project-info">
+            <h3>Orbit Fitness</h3>
+            <p>Plateforme de réservation de cours avec espace membre.</p>
+            <div class="tags"><span>Web App</span><span>UI/UX</span></div>
+          </div>
+        </article>
+        <article class="project-card grad-5">
+          <div class="project-visual"><span>Pixel &amp; Co</span></div>
+          <div class="project-info">
+            <h3>Pixel &amp; Co</h3>
+            <p>Portfolio créatif pour une agence de design graphique.</p>
+            <div class="tags"><span>Portfolio</span><span>Animation</span></div>
+          </div>
+        </article>
+        <article class="project-card grad-6">
+          <div class="project-visual"><span>Aria Legal</span></div>
+          <div class="project-info">
+            <h3>Aria Legal</h3>
+            <p>Site institutionnel pour un cabinet d'avocats, focus confiance &amp; clarté.</p>
+            <div class="tags"><span>Site vitrine</span><span>Performance</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section about">
+    <div class="container about-inner">
+      <div class="about-text">
+        <p class="section-eyebrow">Le studio</p>
+        <h2 class="section-title">Une équipe passionnée par le web</h2>
+        <p>
+          Web Glowing est un studio de création de sites internet dédié aux entrepreneurs, commerces
+          et entreprises qui veulent une présence en ligne à la hauteur de leur ambition. Design, développement
+          et stratégie digitale : nous accompagnons chaque projet de l'idée à la mise en ligne.
+        </p>
+        <ul class="about-list">
+          <li>Design sur mesure, jamais de templates génériques</li>
+          <li>Sites rapides, accessibles et optimisés SEO</li>
+          <li>Accompagnement personnalisé à chaque étape</li>
+          <li>Support et maintenance après la livraison</li>
+        </ul>
+      </div>
+      <div class="about-visual">
+        <div class="orb"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="section process">
+    <div class="container">
+      <p class="section-eyebrow">Notre méthode</p>
+      <h2 class="section-title">Un processus simple et transparent</h2>
+      <div class="process-grid">
+        <div class="process-step">
+          <span class="process-num">01</span>
+          <h3>Découverte</h3>
+          <p>On échange sur vos objectifs, votre marque et vos besoins.</p>
+        </div>
+        <div class="process-step">
+          <span class="process-num">02</span>
+          <h3>Design</h3>
+          <p>Nous créons une maquette fidèle à votre identité, validée avec vous.</p>
+        </div>
+        <div class="process-step">
+          <span class="process-num">03</span>
+          <h3>Développement</h3>
+          <p>Le site prend vie : rapide, responsive et prêt pour le référencement.</p>
+        </div>
+        <div class="process-step">
+          <span class="process-num">04</span>
+          <h3>Lancement</h3>
+          <p>Mise en ligne, formation et suivi pour un démarrage serein.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="section testimonials">
+    <div class="container">
+      <p class="section-eyebrow">Témoignages</p>
+      <h2 class="section-title">Ce que disent nos clients</h2>
+      <div class="testimonials-grid">
+        <blockquote class="testimonial">
+          <p>"Un travail remarquable, à l'écoute et très réactif. Notre nouveau site a boosté nos ventes en ligne dès le premier mois."</p>
+          <footer>— Camille D., Nova Retail</footer>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p>"Web Glowing a parfaitement compris notre image de marque. Le résultat est bluffant et très professionnel."</p>
+          <footer>— Marc L., Atlas Immo</footer>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p>"Process clair, délais respectés, communication fluide. Je recommande sans hésiter."</p>
+          <footer>— Sophie T., Lumen Café</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <div class="contact-glow"></div>
+    <div class="container contact-inner">
+      <p class="section-eyebrow">Contact</p>
+      <h2 class="section-title">Parlons de votre projet</h2>
+      <p class="contact-lead">Décrivez-nous votre besoin, nous revenons vers vous sous 24h ouvrées.</p>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="budget">Type de projet</label>
+          <select id="budget" name="budget">
+            <option>Site vitrine</option>
+            <option>E-commerce</option>
+            <option>Refonte de site</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Envoyer ma demande</button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+
+      <div class="contact-alt">
+        <a href="mailto:contact@webglowing.fr">contact@webglowing.fr</a>
+        <span>·</span>
+        <a href="tel:+33600000000">+33 6 00 00 00 00</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a href="#top" class="logo">WEB<span>GLOWING</span></a>
+    <nav class="footer-nav">
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">Studio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="footer-social">
+      <a href="#" aria-label="Instagram">Instagram</a>
+      <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      <a href="#" aria-label="Behance">Behance</a>
+    </div>
+  </div>
+  <div class="container">
+    <p class="footer-copy">© <span id="year"></span> Web Glowing. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
