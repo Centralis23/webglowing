@@ -29,14 +29,6 @@
   navBackdrop.addEventListener('click', closeNav);
   mainNav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeNav));
 
-  /* ---------- Glow cursor follow ---------- */
-  const glowCursor = document.getElementById('glowCursor');
-  if (glowCursor && window.matchMedia('(pointer: fine)').matches) {
-    window.addEventListener('mousemove', (e) => {
-      glowCursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
-    });
-  }
-
   /* ---------- Scroll reveal ---------- */
   const revealTargets = document.querySelectorAll(
     '.service-card, .project-card, .testimonial, .process-step, .section-title, .section-eyebrow, .about-text, .about-visual'
