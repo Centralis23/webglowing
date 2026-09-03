@@ -143,9 +143,10 @@ h1,h2,h3{font-family:var(--ff-display);font-weight:500;letter-spacing:.01em;colo
 #portfolio{background:var(--white);}
 #portfolio .section-eyebrow{color:var(--bg);text-align:center;}
 #portfolio .section-title{
-  color:var(--bg-deep);text-align:center;max-width:none;margin-left:auto;margin-right:auto;
+  color:#000;text-align:center;max-width:none;margin-left:auto;margin-right:auto;
   font-size:clamp(3.5rem,10vw,8rem);
   line-height:1;
+  text-transform:uppercase;
   margin-bottom:64px;
 }
 .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
