@@ -1,34 +1,6 @@
 (() => {
   'use strict';
 
-  /* ---------- Header scroll state ---------- */
-  const header = document.getElementById('siteHeader');
-  const onScroll = () => {
-    if (window.scrollY > 24) header.classList.add('scrolled');
-    else header.classList.remove('scrolled');
-  };
-  onScroll();
-  window.addEventListener('scroll', onScroll, { passive: true });
-
-  /* ---------- Mobile nav toggle ---------- */
-  const navToggle = document.getElementById('navToggle');
-  const mainNav = document.getElementById('mainNav');
-  const navBackdrop = document.getElementById('navBackdrop');
-  const closeNav = () => {
-    mainNav.classList.remove('open');
-    navToggle.classList.remove('open');
-    navBackdrop.classList.remove('open');
-    navToggle.setAttribute('aria-expanded', 'false');
-  };
-  navToggle.addEventListener('click', () => {
-    const isOpen = mainNav.classList.toggle('open');
-    navToggle.classList.toggle('open', isOpen);
-    navBackdrop.classList.toggle('open', isOpen);
-    navToggle.setAttribute('aria-expanded', String(isOpen));
-  });
-  navBackdrop.addEventListener('click', closeNav);
-  mainNav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeNav));
-
   /* ---------- Scroll reveal ---------- */
   const revealTargets = document.querySelectorAll(
     '.service-card, .project-card, .testimonial, .process-step, .section-title, .section-eyebrow, .about-text, .about-visual'

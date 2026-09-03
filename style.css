@@ -30,88 +30,52 @@ a{color:inherit;text-decoration:none;}
 ul{list-style:none;}
 .container{width:100%;max-width:1180px;margin:0 auto;padding:0 24px;}
 
-h1,h2,h3{font-family:var(--ff-display);font-weight:600;letter-spacing:.01em;color:var(--white);}
+h1,h2,h3{font-family:var(--ff-display);font-weight:500;letter-spacing:.01em;color:var(--white);}
 
-/* ============ Header ============ */
-.site-header{
-  position:sticky;top:0;left:0;right:0;z-index:1000;
-  padding:20px 0;
-  background:var(--white);
-  box-shadow:0 1px 0 rgba(20,6,9,.08);
-  transition:padding .3s ease;
-}
-.site-header.scrolled{
-  padding:12px 0;
-}
-.header-inner{display:flex;align-items:center;justify-content:space-between;}
 .logo{
   font-family:var(--ff-display);
-  font-size:1.35rem;
-  letter-spacing:.12em;
-  color:var(--bg);
-  font-weight:600;
+  font-size:1.3rem;
+  letter-spacing:.18em;
+  color:var(--white);
+  font-weight:500;
+  text-transform:uppercase;
 }
-.logo span{color:var(--bg-deep);opacity:.6;}
-.main-nav{display:flex;align-items:center;gap:34px;}
-.main-nav a{
-  font-size:.86rem;letter-spacing:.03em;color:#5c4c4e;
-  position:relative;padding:4px 0;transition:color .25s ease;
-}
-.main-nav a:not(.nav-cta)::after{
-  content:'';position:absolute;left:0;bottom:0;width:0;height:1px;
-  background:var(--bg);transition:width .25s ease;
-}
-.main-nav a:not(.nav-cta):hover{color:var(--bg);}
-.main-nav a:not(.nav-cta):hover::after{width:100%;}
-.nav-cta{
-  background:var(--bg);
-  color:var(--white) !important;
-  font-weight:600;
-  padding:10px 20px;border-radius:999px;
-  border:1px solid var(--bg);
-  transition:background .25s ease,box-shadow .25s ease,transform .2s ease;
-}
-.nav-cta:hover{background:var(--bg-deep);box-shadow:0 0 24px rgba(110,31,43,.25);transform:translateY(-1px);}
-.nav-toggle{
-  display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;
-}
-.nav-toggle span{width:22px;height:2px;background:var(--bg);transition:transform .25s ease,opacity .25s ease;}
-
-.nav-backdrop{
-  display:none;
-  position:fixed;inset:0;
-  background:rgba(20,5,8,.6);
-  backdrop-filter:blur(2px);
-  opacity:0;
-  transition:opacity .3s ease;
-  z-index:900;
-}
-.nav-backdrop.open{display:block;opacity:1;}
-
-@media (max-width:860px){
-  .nav-toggle{display:flex;}
-  .main-nav{
-    position:fixed;top:0;right:0;height:100vh;width:min(320px,80vw);
-    background:var(--bg-deep);border-left:1px solid var(--line);
-    flex-direction:column;align-items:flex-start;justify-content:center;gap:26px;
-    padding:40px;transform:translateX(100%);transition:transform .35s ease;
-  }
-  .main-nav.open{transform:translateX(0);}
-  .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
-  .nav-toggle.open span:nth-child(2){opacity:0;}
-  .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-}
+.logo span{color:var(--accent);}
 
 /* ============ Hero ============ */
-.hero{padding:150px 0 70px;}
-.hero-inner{max-width:700px;}
+.hero{
+  position:relative;
+  padding:150px 0 70px;
+  overflow:hidden;
+}
+.hero::before{
+  content:'';
+  position:absolute;inset:0;z-index:0;
+  background:url('assets/hero-bg.png') center/cover no-repeat;
+}
+.hero::after{
+  content:'';
+  position:absolute;inset:0;z-index:1;
+  background:linear-gradient(0deg, rgba(18,6,9,.75) 0%, rgba(18,6,9,.25) 55%, rgba(18,6,9,.4) 100%);
+}
+.hero-inner{position:relative;z-index:2;max-width:820px;}
 .hero h1{
-  font-size:clamp(2.2rem,5vw,3.4rem);
-  line-height:1.15;
+  font-size:clamp(1.8rem,4.4vw,2.9rem);
+  line-height:1.25;
+  letter-spacing:.03em;
+  text-transform:uppercase;
   margin-bottom:18px;
   color:var(--white);
 }
-.hero-lead{color:var(--text-dim);font-size:1.05rem;margin-bottom:32px;}
+.hero-lead{
+  font-family:var(--ff-display);
+  font-style:italic;
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  color:var(--text-dim);
+  font-size:.92rem;
+  margin-bottom:32px;
+}
 .hero-actions{display:flex;gap:16px;flex-wrap:wrap;}
 .btn{
   display:inline-flex;align-items:center;justify-content:center;
