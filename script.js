@@ -1,27 +1,6 @@
 (() => {
   'use strict';
 
-  /* ---------- Intro animation ---------- */
-  const intro = document.getElementById('introOverlay');
-  const body = document.body;
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  function endIntro() {
-    body.classList.remove('intro-active');
-    if (intro) intro.classList.add('intro--hidden');
-  }
-
-  if (!intro || reduceMotion) {
-    endIntro();
-  } else {
-    const EXIT_AT = 2950;
-    const REMOVE_AFTER_EXIT = 1250;
-    window.setTimeout(() => {
-      intro.classList.add('intro--exit');
-      window.setTimeout(endIntro, REMOVE_AFTER_EXIT);
-    }, EXIT_AT);
-  }
-
   /* ---------- Header scroll state ---------- */
   const header = document.getElementById('siteHeader');
   const onScroll = () => {

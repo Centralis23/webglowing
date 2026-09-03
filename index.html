@@ -11,20 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body class="intro-active">
-
-<div class="intro" id="introOverlay" aria-hidden="true">
-  <div class="intro-bloom" id="introBloom"></div>
-  <div class="intro-content">
-    <h1 class="intro-word">WEB GLOWING</h1>
-    <svg class="intro-sig" viewBox="0 0 420 60" width="360" height="52" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-      <circle class="intro-sig-dot" cx="8" cy="38" r="3"></circle>
-      <path class="intro-sig-path" pathLength="1"
-        d="M8,38 C60,10 100,55 150,30 C200,8 250,52 300,28 C330,14 350,30 372,18 C384,12 392,22 404,14"></path>
-    </svg>
-    <p class="intro-tagline">Studio de création de sites internet</p>
-  </div>
-</div>
+<body>
 
 <div class="glow-cursor" id="glowCursor"></div>
 
@@ -48,24 +35,26 @@
 <main id="top">
 
   <section class="hero">
-    <div class="hero-glow hero-glow-1"></div>
-    <div class="hero-glow hero-glow-2"></div>
+    <video class="hero-media" autoplay muted loop playsinline>
+      <source src="assets/hero-bg.mp4" type="video/mp4">
+    </video>
+    <div class="hero-scrim"></div>
     <div class="container hero-inner">
-      <p class="eyebrow">Studio de création de sites internet</p>
       <h1>Des sites web qui font <span class="text-glow">briller</span> votre marque.</h1>
-      <p class="hero-lead">
-        Nous concevons et développons des sites vitrines, e-commerce et applications web sur mesure —
-        alliant design soigné, performance et résultats concrets pour votre activité.
-      </p>
       <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Discutons de votre projet</a>
-        <a href="#portfolio" class="btn btn-ghost">Voir nos réalisations</a>
+        <a href="#contact" class="btn-hero">
+          Commencer l'expérience
+          <span class="btn-hero-arrow" aria-hidden="true">→</span>
+        </a>
       </div>
-      <div class="hero-stats">
-        <div class="stat"><span class="stat-num">40+</span><span class="stat-label">Projets livrés</span></div>
-        <div class="stat"><span class="stat-num">98%</span><span class="stat-label">Clients satisfaits</span></div>
-        <div class="stat"><span class="stat-num">5</span><span class="stat-label">Ans d'expérience</span></div>
-      </div>
+    </div>
+  </section>
+
+  <section class="stats-strip">
+    <div class="container hero-stats">
+      <div class="stat"><span class="stat-num">40+</span><span class="stat-label">Projets livrés</span></div>
+      <div class="stat"><span class="stat-num">98%</span><span class="stat-label">Clients satisfaits</span></div>
+      <div class="stat"><span class="stat-num">5</span><span class="stat-label">Ans d'expérience</span></div>
     </div>
   </section>
 
