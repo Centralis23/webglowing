@@ -247,6 +247,19 @@ h1,h2,h3{font-family:var(--ff-display);font-weight:500;letter-spacing:.01em;colo
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
 .reveal.is-visible{opacity:1;transform:translateY(0);}
 
+#portfolio .section-title.reveal{opacity:1;transform:none;transition:none;}
+.title-write{
+  display:inline-block;
+  clip-path:inset(0 100% 0 0);
+  transition:clip-path 1s cubic-bezier(.65,0,.15,1);
+}
+#portfolio .section-title.is-visible .title-write{
+  clip-path:inset(0 0 0 0);
+}
+@media (prefers-reduced-motion: reduce){
+  .title-write{clip-path:inset(0 0 0 0);transition:none;}
+}
+
 /* ============ Responsive ============ */
 @media (max-width:960px){
   .services-grid,.portfolio-grid,.testimonials-grid{grid-template-columns:repeat(2,1fr);}
