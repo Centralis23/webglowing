@@ -1,9 +1,25 @@
 (() => {
   'use strict';
 
+  /* ---------- Portfolio showcase ---------- */
+  const showcaseItems = document.querySelectorAll('.showcase-item');
+  const showcaseFrames = document.querySelectorAll('.showcase-frame');
+  showcaseItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      const index = item.dataset.index;
+      showcaseItems.forEach((el) => {
+        el.classList.toggle('is-active', el === item);
+        el.setAttribute('aria-selected', el === item ? 'true' : 'false');
+      });
+      showcaseFrames.forEach((frame) => {
+        frame.classList.toggle('is-active', frame.dataset.index === index);
+      });
+    });
+  });
+
   /* ---------- Scroll reveal ---------- */
   const revealTargets = document.querySelectorAll(
-    '.service-card, .project-card, .testimonial, .process-step, .section-title, .section-eyebrow, .about-text, .about-visual'
+    '.service-card, .testimonial, .process-step, .section-title, .section-eyebrow, .about-text, .about-visual'
   );
   revealTargets.forEach((el) => el.classList.add('reveal'));
 
