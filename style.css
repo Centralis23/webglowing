@@ -141,6 +141,7 @@ h1,h2,h3{font-family:var(--ff-display);font-weight:500;letter-spacing:.01em;colo
 
 /* ============ Portfolio ============ */
 #portfolio{background:var(--white);}
+#portfolio .container{max-width:1400px;}
 #portfolio .section-eyebrow{color:#000;text-align:center;}
 #portfolio .section-title{
   color:#000;text-align:center;max-width:none;margin-left:auto;margin-right:auto;
