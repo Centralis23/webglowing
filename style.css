@@ -163,11 +163,6 @@ h1,h2,h3{font-family:var(--ff-display);font-weight:500;letter-spacing:.01em;colo
 .showcase-item:last-child{border-bottom:none;}
 .showcase-item:hover{background:#f4f4f4;}
 .showcase-item.is-active{background:#000;}
-.showcase-num{
-  font-family:var(--ff-display);font-size:.85rem;color:#999;
-  min-width:28px;
-}
-.showcase-item.is-active .showcase-num{color:#fff;}
 .showcase-body{display:flex;flex-direction:column;gap:6px;flex:1;}
 .showcase-name{font-family:var(--ff-display);font-size:1.5rem;color:#000;transition:color .25s ease;}
 .showcase-item.is-active .showcase-name{color:#fff;}
@@ -307,7 +302,6 @@ h1,h2,h3{font-family:var(--ff-display);font-weight:500;letter-spacing:.01em;colo
   .services-grid,.testimonials-grid,.process-grid{grid-template-columns:1fr;}
   .showcase-item{padding:18px 16px;gap:12px;}
   .showcase-name{font-size:1.15rem;}
-  .showcase-num{min-width:20px;font-size:.75rem;}
   .showcase-tag{display:none;}
   .showcase-visual{min-height:240px;}
   .form-row{grid-template-columns:1fr;}
