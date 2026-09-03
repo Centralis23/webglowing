@@ -74,7 +74,7 @@ h1,h2,h3{font-family:var(--ff-display);font-weight:500;letter-spacing:.01em;colo
   font-style:italic;
   text-transform:uppercase;
   letter-spacing:.15em;
-  color:var(--text-dim);
+  color:var(--white);
   font-size:.92rem;
   margin-bottom:32px;
 }
