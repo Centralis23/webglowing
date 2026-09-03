@@ -149,7 +149,7 @@ h1,h2,h3{font-family:var(--ff-display);font-weight:500;letter-spacing:.01em;colo
   text-transform:uppercase;
   margin-bottom:64px;
 }
-.portfolio-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;}
+.portfolio-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;}
 .project-card{
   border-radius:18px;overflow:hidden;
   transition:transform .35s ease,box-shadow .35s ease;
