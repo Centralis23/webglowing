@@ -18,7 +18,6 @@
     const total = carouselCards.length;
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let activeIndex = 0;
-    let paused = false;
 
     const shortestOffset = (index) => {
       let diff = index - activeIndex;
@@ -69,10 +68,18 @@
 
     if (!prefersReducedMotion) {
       let autoplay = setInterval(() => goTo(activeIndex + 1), 3200);
-      carouselStage.addEventListener('mouseenter', () => { paused = true; clearInterval(autoplay); });
-      carouselStage.addEventListener('mouseleave', () => {
-        paused = false;
-        autoplay = setInterval(() => goTo(activeIndex + 1), 3200);
+      let hoverCount = 0;
+      const pause = () => {
+        hoverCount += 1;
+        clearInterval(autoplay);
+      };
+      const resume = () => {
+        hoverCount = Math.max(0, hoverCount - 1);
+        if (hoverCount === 0) autoplay = setInterval(() => goTo(activeIndex + 1), 3200);
+      };
+      carouselCards.forEach((card) => {
+        card.addEventListener('mouseenter', pause);
+        card.addEventListener('mouseleave', resume);
       });
     }
   }
