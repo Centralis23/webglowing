@@ -241,7 +241,7 @@ h1,h2,h3{font-family:var(--ff-display);font-weight:500;letter-spacing:.01em;colo
 /* ============ Contact ============ */
 .contact{
   --c-bg:#ffffff;
-  --c-black:#3a3838;
+  --c-black:#000000;
   --c-ink-dim:#767374;
   --form-ink:#141213;
   --form-ink-dim:#767374;
@@ -253,7 +253,9 @@ h1,h2,h3{font-family:var(--ff-display);font-weight:500;letter-spacing:.01em;colo
   display:grid;grid-template-columns:.85fr 1.15fr;gap:32px;align-items:stretch;
 }
 .contact-info{
-  background:var(--c-black);
+  background:
+    linear-gradient(165deg, rgba(0,0,0,.9) 0%, rgba(0,0,0,.72) 55%, rgba(0,0,0,.92) 100%),
+    url('assets/contact-bg.jpg') center/cover no-repeat;
   border-radius:22px;padding:44px;
 }
 .contact-info .section-title{color:var(--c-bg);margin-bottom:22px;}
