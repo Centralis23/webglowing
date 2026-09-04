@@ -5,7 +5,11 @@
   const showcaseItems = document.querySelectorAll('.showcase-item');
   const showcaseFrames = document.querySelectorAll('.showcase-frame');
   showcaseItems.forEach((item) => {
-    item.addEventListener('click', () => {
+    item.addEventListener('click', (e) => {
+      const tag = e.target.closest('.showcase-tag');
+      if (tag && tag.dataset.url) {
+        window.open(tag.dataset.url, '_blank', 'noopener');
+      }
       const index = item.dataset.index;
       showcaseItems.forEach((el) => {
         el.classList.toggle('is-active', el === item);
