@@ -90,6 +90,27 @@
   );
   revealTargets.forEach((el) => observer.observe(el));
 
+  /* ---------- Contact mad-lib: auto-sizing fields ---------- */
+  const madlibInputs = document.querySelectorAll('.madlib-field input');
+  const sizeMadlibInput = (el) => {
+    const minCh = (el.placeholder || '').length || 3;
+    el.style.width = Math.max(el.value.length, minCh) + 1 + 'ch';
+  };
+  madlibInputs.forEach((el) => {
+    sizeMadlibInput(el);
+    el.addEventListener('input', () => sizeMadlibInput(el));
+  });
+
+  const madlibMessage = document.querySelector('.madlib-message');
+  const sizeMadlibMessage = () => {
+    madlibMessage.style.height = 'auto';
+    madlibMessage.style.height = madlibMessage.scrollHeight + 'px';
+  };
+  if (madlibMessage) {
+    sizeMadlibMessage();
+    madlibMessage.addEventListener('input', sizeMadlibMessage);
+  }
+
   /* ---------- Contact form (static demo) ---------- */
   const contactForm = document.getElementById('contactForm');
   const formNote = document.getElementById('formNote');
@@ -98,6 +119,8 @@
       e.preventDefault();
       formNote.textContent = 'Merci ! Votre message a bien été noté, nous revenons vers vous rapidement.';
       contactForm.reset();
+      madlibInputs.forEach(sizeMadlibInput);
+      if (madlibMessage) sizeMadlibMessage();
     });
   }
 
