@@ -140,7 +140,7 @@ h1,h2,h3{font-family:var(--ff-display);font-weight:500;letter-spacing:.01em;colo
 .service-card p{color:var(--text-dim);font-size:.92rem;}
 
 /* ============ Portfolio ============ */
-#portfolio{--ink:#8a5a42;--paper:#f5ebe1;--hair:rgba(138,90,66,.18);background:var(--paper);}
+#portfolio{--ink:#161513;--paper:#faf9f7;--hair:rgba(22,21,19,.14);--nude:#8a5a42;--nude-light:#c9997c;background:var(--paper);}
 #portfolio .container{max-width:1400px;}
 #portfolio .section-eyebrow{color:var(--ink);text-align:center;}
 #portfolio .section-title{
@@ -161,27 +161,27 @@ h1,h2,h3{font-family:var(--ff-display);font-weight:500;letter-spacing:.01em;colo
   transition:background .3s ease;
 }
 .showcase-item:last-child{border-bottom:none;}
-.showcase-item:hover{background:rgba(22,21,19,.04);}
-.showcase-item.is-active{background:var(--ink);}
+.showcase-item:hover{background:rgba(138,90,66,.06);}
+.showcase-item.is-active{background:var(--nude);}
 .showcase-body{display:flex;flex-direction:column;gap:6px;flex:1;}
 .showcase-name{font-family:var(--ff-display);font-size:1.5rem;color:var(--ink);transition:color .3s ease;}
 .showcase-item.is-active .showcase-name{color:var(--paper);}
-.showcase-desc{font-size:.82rem;color:#a98a76;max-width:320px;display:none;}
-.showcase-item.is-active .showcase-desc{color:#dcc0ac;display:block;}
+.showcase-desc{font-size:.82rem;color:#8a8580;max-width:320px;display:none;}
+.showcase-item.is-active .showcase-desc{color:#eddcce;display:block;}
 .showcase-tag{
   font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);
   border:1px solid var(--hair);border-radius:999px;padding:5px 12px;white-space:nowrap;
   transition:color .3s ease,border-color .3s ease;
 }
 .showcase-item.is-active .showcase-tag{color:var(--paper);border-color:rgba(250,249,247,.35);}
-.showcase-visual{position:relative;min-height:460px;background:var(--ink);overflow:hidden;}
+.showcase-visual{position:relative;min-height:460px;background:var(--nude);overflow:hidden;}
 .showcase-frame{
   position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
   opacity:0;transition:opacity .6s ease;
   font-family:var(--ff-display);font-size:2rem;letter-spacing:.03em;color:var(--paper);
   background:
     radial-gradient(120% 100% at 15% 10%, rgba(255,255,255,.16), transparent 55%),
-    linear-gradient(155deg,#c9997c 0%,#8a5a42 65%);
+    linear-gradient(155deg,var(--nude-light) 0%,var(--nude) 65%);
 }
 .showcase-frame.is-active{opacity:1;}
 .tags{display:flex;gap:8px;flex-wrap:wrap;}
