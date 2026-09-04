@@ -164,10 +164,10 @@ h1,h2,h3{font-family:var(--ff-display);font-weight:500;letter-spacing:.01em;colo
 }
 .carousel-card{
   position:absolute;top:50%;left:50%;
-  width:320px;height:420px;
-  margin-top:-210px;margin-left:-160px;
+  width:360px;height:360px;
+  margin-top:-180px;margin-left:-180px;
   display:block;overflow:hidden;
-  border-radius:50%/9%;
+  border-radius:28px;
   box-shadow:0 40px 70px rgba(20,16,13,.3);
   background:var(--ink);
   transition:transform 1s cubic-bezier(.65,0,.35,1),opacity 1s ease;
@@ -185,12 +185,12 @@ h1,h2,h3{font-family:var(--ff-display);font-weight:500;letter-spacing:.01em;colo
   border-bottom:1px solid var(--ink);padding-bottom:3px;
 }
 @media (max-width:960px){
-  .carousel-stage{height:420px;}
-  .carousel-card{width:240px;height:320px;margin-top:-160px;margin-left:-120px;}
+  .carousel-stage{height:400px;}
+  .carousel-card{width:280px;height:280px;margin-top:-140px;margin-left:-140px;border-radius:22px;}
 }
 @media (max-width:640px){
-  .carousel-stage{height:340px;}
-  .carousel-card{width:190px;height:260px;margin-top:-130px;margin-left:-95px;}
+  .carousel-stage{height:320px;}
+  .carousel-card{width:220px;height:220px;margin-top:-110px;margin-left:-110px;border-radius:18px;}
   .carousel-caption-name{font-size:1.2rem;}
 }
 
