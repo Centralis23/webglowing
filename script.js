@@ -1,31 +1,51 @@
 (() => {
   'use strict';
 
-  /* ---------- Portfolio 3D carousel ---------- */
+  /* ---------- Portfolio 3D coverflow ---------- */
   const carouselStage = document.querySelector('.carousel-stage');
   const carousel3d = document.getElementById('portfolioCarousel');
+  const carouselCards = document.querySelectorAll('.carousel-card');
   const carouselNameEl = document.getElementById('carouselName');
   const carouselLinkEl = document.getElementById('carouselLink');
 
-  if (carousel3d && carouselStage) {
+  if (carousel3d && carouselStage && carouselCards.length) {
     const projects = [
       { name: 'Centralis Business Group', url: 'https://centralisbusinessgroup.com' },
       { name: 'Sehene', url: 'https://www.emma-d.webdesignies.fr' },
       { name: 'Univers des sœurs', url: 'https://www.universdessoeurs.fr/' },
       { name: 'Une Oummy qui bricole', url: null },
     ];
-    const ROTATE_DEG_PER_SEC = 9;
+    const total = carouselCards.length;
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    let angle = 0;
-    let lastTime = null;
+    let activeIndex = 0;
     let paused = false;
-    let lastIndex = -1;
+
+    const shortestOffset = (index) => {
+      let diff = index - activeIndex;
+      diff = ((diff % total) + total) % total;
+      if (diff > total / 2) diff -= total;
+      return diff;
+    };
+
+    const layout = () => {
+      carouselCards.forEach((card) => {
+        const i = Number(card.dataset.i);
+        const offset = shortestOffset(i);
+        const abs = Math.abs(offset);
+        const x = offset * 230;
+        const z = -abs * 200;
+        const rotate = offset * -28;
+        const scale = 1 - abs * 0.16;
+        const opacity = abs > 1.4 ? 0 : 1 - abs * 0.25;
+        card.style.transform = `translateX(${x}px) translateZ(${z}px) rotateY(${rotate}deg) scale(${scale})`;
+        card.style.opacity = String(Math.max(opacity, 0));
+        card.style.zIndex = String(100 - abs);
+        card.style.pointerEvents = abs > 1.4 ? 'none' : '';
+      });
+    };
 
     const updateCaption = () => {
-      const index = (((Math.round(-angle / 90) % 4) + 4) % 4);
-      if (index === lastIndex) return;
-      lastIndex = index;
-      const project = projects[index];
+      const project = projects[activeIndex];
       carouselNameEl.textContent = project.name;
       if (project.url) {
         carouselLinkEl.innerHTML = 'Voir le site <span>→</span>';
@@ -37,23 +57,23 @@
         carouselLinkEl.onclick = null;
       }
     };
+
+    const goTo = (index) => {
+      activeIndex = ((index % total) + total) % total;
+      layout();
+      updateCaption();
+    };
+
+    layout();
     updateCaption();
 
     if (!prefersReducedMotion) {
-      const tick = (now) => {
-        if (lastTime === null) lastTime = now;
-        const dt = (now - lastTime) / 1000;
-        lastTime = now;
-        if (!paused) {
-          angle -= ROTATE_DEG_PER_SEC * dt;
-          carousel3d.style.transform = `rotateY(${angle}deg)`;
-          updateCaption();
-        }
-        requestAnimationFrame(tick);
-      };
-      requestAnimationFrame(tick);
-      carouselStage.addEventListener('mouseenter', () => { paused = true; });
-      carouselStage.addEventListener('mouseleave', () => { paused = false; });
+      let autoplay = setInterval(() => goTo(activeIndex + 1), 3200);
+      carouselStage.addEventListener('mouseenter', () => { paused = true; clearInterval(autoplay); });
+      carouselStage.addEventListener('mouseleave', () => {
+        paused = false;
+        autoplay = setInterval(() => goTo(activeIndex + 1), 3200);
+      });
     }
   }
 

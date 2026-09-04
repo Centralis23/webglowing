@@ -150,27 +150,28 @@ h1,h2,h3{font-family:var(--ff-display);font-weight:500;letter-spacing:.01em;colo
   text-transform:uppercase;
   margin-bottom:64px;
 }
-/* ---- Portfolio 3D rotating carousel ---- */
+/* ---- Portfolio 3D coverflow ---- */
 .carousel-stage{
-  perspective:2200px;
-  height:560px;
+  perspective:1800px;
+  height:520px;
   display:flex;align-items:center;justify-content:center;
   margin-top:56px;
+  overflow:hidden;
 }
 .carousel-3d{
-  position:relative;width:380px;height:480px;
+  position:relative;width:100%;height:100%;
   transform-style:preserve-3d;
-  transform:rotateY(0deg);
-  will-change:transform;
 }
-.carousel-3d.is-dragging{transition:none;}
 .carousel-card{
-  position:absolute;inset:0;display:block;overflow:hidden;
+  position:absolute;top:50%;left:50%;
+  width:320px;height:420px;
+  margin-top:-210px;margin-left:-160px;
+  display:block;overflow:hidden;
   border-radius:50%/9%;
-  box-shadow:0 40px 70px rgba(20,16,13,.35);
+  box-shadow:0 40px 70px rgba(20,16,13,.3);
   background:var(--ink);
-  transform:rotateY(calc(var(--i) * 90deg)) translateZ(420px);
-  backface-visibility:hidden;
+  transition:transform 1s cubic-bezier(.65,0,.35,1),opacity 1s ease;
+  will-change:transform;
 }
 .carousel-card img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;}
 .carousel-caption{
@@ -184,14 +185,12 @@ h1,h2,h3{font-family:var(--ff-display);font-weight:500;letter-spacing:.01em;colo
   border-bottom:1px solid var(--ink);padding-bottom:3px;
 }
 @media (max-width:960px){
-  .carousel-stage{height:440px;}
-  .carousel-3d{width:280px;height:360px;}
-  .carousel-card{transform:rotateY(calc(var(--i) * 90deg)) translateZ(320px);}
+  .carousel-stage{height:420px;}
+  .carousel-card{width:240px;height:320px;margin-top:-160px;margin-left:-120px;}
 }
 @media (max-width:640px){
   .carousel-stage{height:340px;}
-  .carousel-3d{width:200px;height:270px;}
-  .carousel-card{transform:rotateY(calc(var(--i) * 90deg)) translateZ(230px);}
+  .carousel-card{width:190px;height:260px;margin-top:-130px;margin-left:-95px;}
   .carousel-caption-name{font-size:1.2rem;}
 }
 
