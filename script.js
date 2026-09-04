@@ -32,8 +32,8 @@
         const i = Number(card.dataset.i);
         const offset = shortestOffset(i);
         const abs = Math.abs(offset);
-        const x = offset * 230;
-        const z = -abs * 200;
+        const x = offset * 320;
+        const z = -abs * 260;
         const rotate = offset * -28;
         const scale = 1 - abs * 0.16;
         const opacity = abs > 1.4 ? 0 : 1 - abs * 0.25;
