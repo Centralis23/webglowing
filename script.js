@@ -4,20 +4,27 @@
   /* ---------- Portfolio showcase ---------- */
   const showcaseItems = document.querySelectorAll('.showcase-item');
   const showcaseFrames = document.querySelectorAll('.showcase-frame');
+  const activateShowcase = (item) => {
+    const index = item.dataset.index;
+    showcaseItems.forEach((el) => {
+      el.classList.toggle('is-active', el === item);
+      el.setAttribute('aria-selected', el === item ? 'true' : 'false');
+    });
+    showcaseFrames.forEach((frame) => {
+      frame.classList.toggle('is-active', frame.dataset.index === index);
+    });
+  };
   showcaseItems.forEach((item) => {
     item.addEventListener('click', (e) => {
-      const tag = e.target.closest('.showcase-tag');
-      if (tag && tag.dataset.url) {
-        window.open(tag.dataset.url, '_blank', 'noopener');
+      if (e.target.closest('.showcase-tag')) return;
+      activateShowcase(item);
+    });
+    item.addEventListener('keydown', (e) => {
+      if (e.target !== item) return;
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        activateShowcase(item);
       }
-      const index = item.dataset.index;
-      showcaseItems.forEach((el) => {
-        el.classList.toggle('is-active', el === item);
-        el.setAttribute('aria-selected', el === item ? 'true' : 'false');
-      });
-      showcaseFrames.forEach((frame) => {
-        frame.classList.toggle('is-active', frame.dataset.index === index);
-      });
     });
   });
 
