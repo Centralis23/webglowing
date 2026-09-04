@@ -1,6 +1,17 @@
 (() => {
   'use strict';
 
+  /* ---------- Portfolio tab stack ---------- */
+  const tabItems = document.querySelectorAll('.tab-item');
+  tabItems.forEach((item) => {
+    const header = item.querySelector('.tab-header');
+    header?.addEventListener('click', () => {
+      const wasOpen = item.classList.contains('is-open');
+      tabItems.forEach((el) => el.classList.remove('is-open'));
+      if (!wasOpen) item.classList.add('is-open');
+    });
+  });
+
   /* ---------- Scroll reveal ---------- */
   const revealTargets = document.querySelectorAll(
     '.service-card, .portfolio-card, .testimonial, .process-step, .section-title, .section-eyebrow, .about-text, .about-visual'
