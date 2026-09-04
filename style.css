@@ -153,7 +153,7 @@ h1,h2,h3{font-family:var(--ff-display);font-weight:500;letter-spacing:.01em;colo
 /* ---- Portfolio 3D coverflow ---- */
 .carousel-stage{
   perspective:2000px;
-  height:660px;
+  height:520px;
   display:flex;align-items:center;justify-content:center;
   margin-top:56px;
   overflow:hidden;
@@ -164,10 +164,10 @@ h1,h2,h3{font-family:var(--ff-display);font-weight:500;letter-spacing:.01em;colo
 }
 .carousel-card{
   position:absolute;top:50%;left:50%;
-  width:460px;height:460px;
-  margin-top:-230px;margin-left:-230px;
+  width:600px;height:380px;
+  margin-top:-190px;margin-left:-300px;
   display:block;overflow:hidden;
-  border-radius:32px;
+  border-radius:24px;
   box-shadow:0 40px 70px rgba(20,16,13,.3);
   background:var(--ink);
   transition:transform 1s cubic-bezier(.65,0,.35,1),opacity 1s ease;
@@ -187,12 +187,12 @@ h1,h2,h3{font-family:var(--ff-display);font-weight:500;letter-spacing:.01em;colo
   border-bottom:1px solid var(--ink);padding-bottom:3px;
 }
 @media (max-width:960px){
-  .carousel-stage{height:480px;}
-  .carousel-card{width:340px;height:340px;margin-top:-170px;margin-left:-170px;border-radius:26px;}
+  .carousel-stage{height:400px;}
+  .carousel-card{width:440px;height:280px;margin-top:-140px;margin-left:-220px;border-radius:20px;}
 }
 @media (max-width:640px){
-  .carousel-stage{height:380px;}
-  .carousel-card{width:260px;height:260px;margin-top:-130px;margin-left:-130px;border-radius:20px;}
+  .carousel-stage{height:300px;}
+  .carousel-card{width:320px;height:204px;margin-top:-102px;margin-left:-160px;border-radius:16px;}
   .carousel-caption-name{font-size:1.2rem;}
 }
 
