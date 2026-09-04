@@ -26,47 +26,59 @@
     <div class="container">
       <p class="section-eyebrow">Nos derniers projets</p>
       <h2 class="section-title"><span class="title-write">Portfolio</span></h2>
-      <div class="showcase">
-        <div class="showcase-list" role="tablist">
-          <div class="showcase-item is-active" data-index="0" role="tab" aria-selected="true" tabindex="0">
-            <span class="showcase-body">
-              <span class="showcase-name">Centralis Business Group</span>
-              <span class="showcase-desc">Formations diplômantes, espaces professionnels et accompagnement stratégique pour développer vos ambitions.</span>
-            </span>
-            <a class="showcase-tag" href="https://centralisbusinessgroup.com" target="_blank" rel="noopener">Voir le site</a>
-            <span class="showcase-progress"><span class="showcase-progress-bar"></span></span>
-          </div>
-          <div class="showcase-item" data-index="1" role="tab" aria-selected="false" tabindex="0">
-            <span class="showcase-body">
-              <span class="showcase-name">Sehene</span>
-              <span class="showcase-desc">Boutique de bijoux d'exception — expérience élégante et mise en valeur des collections.</span>
-            </span>
-            <a class="showcase-tag" href="https://www.emma-d.webdesignies.fr" target="_blank" rel="noopener">Voir le site</a>
-            <span class="showcase-progress"><span class="showcase-progress-bar"></span></span>
-          </div>
-          <div class="showcase-item" data-index="2" role="tab" aria-selected="false" tabindex="0">
-            <span class="showcase-body">
-              <span class="showcase-name">Univers des sœurs</span>
-              <span class="showcase-desc">Formation en ligne Attaché de Foulard. Une formation simple, accessible et pratique pour débuter.</span>
-            </span>
-            <a class="showcase-tag" href="https://www.universdessoeurs.fr/" target="_blank" rel="noopener">Voir le site</a>
-            <span class="showcase-progress"><span class="showcase-progress-bar"></span></span>
-          </div>
-          <div class="showcase-item" data-index="3" role="tab" aria-selected="false" tabindex="0">
-            <span class="showcase-body">
-              <span class="showcase-name">Une Oummy qui bricole</span>
-              <span class="showcase-desc">Peinture, décoration, petits travaux : un savoir-faire complet, à chaque étape de votre projet.</span>
-            </span>
-            <span class="showcase-tag">Voir le site</span>
-            <span class="showcase-progress"><span class="showcase-progress-bar"></span></span>
-          </div>
+    </div>
+
+    <div class="showcase">
+      <div class="showcase-stage">
+        <div class="showcase-frame is-active" data-index="0"><img src="assets/centralis-hero.png" alt="Centralis Business Group" loading="lazy"></div>
+        <div class="showcase-frame" data-index="1"><img src="assets/sehene-hero.png" alt="Sehene" loading="lazy"></div>
+        <div class="showcase-frame" data-index="2"><img src="assets/soeurs-hero.png" alt="Univers des sœurs" loading="lazy"></div>
+        <div class="showcase-frame" data-index="3"><img src="assets/oummy-hero.png" alt="Une Oummy qui bricole" loading="lazy"></div>
+        <div class="showcase-stage-overlay"></div>
+
+        <div class="showcase-caption">
+          <h3 class="showcase-caption-name">Centralis Business Group</h3>
+          <p class="showcase-caption-desc">Formations diplômantes, espaces professionnels et accompagnement stratégique pour développer vos ambitions.</p>
+          <a class="showcase-caption-link" href="https://centralisbusinessgroup.com" target="_blank" rel="noopener">
+            <span>Voir le site</span><span class="showcase-caption-arrow">→</span>
+          </a>
         </div>
-        <div class="showcase-visual">
-          <div class="showcase-frame is-active" data-index="0"><img src="assets/centralis-hero.png" alt="Centralis Business Group" loading="lazy"></div>
-          <div class="showcase-frame" data-index="1"><img src="assets/sehene-hero.png" alt="Sehene" loading="lazy"></div>
-          <div class="showcase-frame" data-index="2"><img src="assets/soeurs-hero.png" alt="Univers des sœurs" loading="lazy"></div>
-          <div class="showcase-frame" data-index="3"><img src="assets/oummy-hero.png" alt="Une Oummy qui bricole" loading="lazy"></div>
-        </div>
+
+        <button type="button" class="showcase-arrow showcase-arrow-prev" aria-label="Projet précédent">‹</button>
+        <button type="button" class="showcase-arrow showcase-arrow-next" aria-label="Projet suivant">›</button>
+
+        <div class="showcase-cursor" aria-hidden="true">Voir le site</div>
+      </div>
+
+      <div class="showcase-nav" role="tablist">
+        <button type="button" class="showcase-navitem is-active" role="tab" aria-selected="true"
+          data-index="0" data-name="Centralis Business Group"
+          data-desc="Formations diplômantes, espaces professionnels et accompagnement stratégique pour développer vos ambitions."
+          data-url="https://centralisbusinessgroup.com">
+          <span class="showcase-navitem-name">Centralis Business Group</span>
+          <span class="showcase-progress"><span class="showcase-progress-bar"></span></span>
+        </button>
+        <button type="button" class="showcase-navitem" role="tab" aria-selected="false"
+          data-index="1" data-name="Sehene"
+          data-desc="Boutique de bijoux d'exception — expérience élégante et mise en valeur des collections."
+          data-url="https://www.emma-d.webdesignies.fr">
+          <span class="showcase-navitem-name">Sehene</span>
+          <span class="showcase-progress"><span class="showcase-progress-bar"></span></span>
+        </button>
+        <button type="button" class="showcase-navitem" role="tab" aria-selected="false"
+          data-index="2" data-name="Univers des sœurs"
+          data-desc="Formation en ligne Attaché de Foulard. Une formation simple, accessible et pratique pour débuter."
+          data-url="https://www.universdessoeurs.fr/">
+          <span class="showcase-navitem-name">Univers des sœurs</span>
+          <span class="showcase-progress"><span class="showcase-progress-bar"></span></span>
+        </button>
+        <button type="button" class="showcase-navitem" role="tab" aria-selected="false"
+          data-index="3" data-name="Une Oummy qui bricole"
+          data-desc="Peinture, décoration, petits travaux : un savoir-faire complet, à chaque étape de votre projet."
+          data-url="">
+          <span class="showcase-navitem-name">Une Oummy qui bricole</span>
+          <span class="showcase-progress"><span class="showcase-progress-bar"></span></span>
+        </button>
       </div>
     </div>
   </section>
