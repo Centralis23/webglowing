@@ -68,21 +68,27 @@
   </section>
 
   <section id="contact" class="section contact">
-    <div class="contact-glow"></div>
     <div class="container contact-inner">
-      <p class="section-eyebrow">Contact</p>
-      <h2 class="section-title">Parlons de votre projet</h2>
-      <p class="contact-lead">Nous concevons des sites vitrine et des sites e-commerce sur mesure. Décrivez-nous votre besoin, nous revenons vers vous sous 24h ouvrées.</p>
+      <div class="contact-col contact-col-text">
+        <p class="section-eyebrow">Contact</p>
+        <h2 class="section-title">Parlons de votre projet</h2>
+        <p class="contact-lead">Nous concevons des sites vitrine et des sites e-commerce sur mesure. Décrivez-nous votre besoin, nous revenons vers vous sous 24h ouvrées.</p>
+        <div class="contact-alt">
+          <a href="mailto:contact@webglowing.fr">contact@webglowing.fr</a>
+          <span>·</span>
+          <a href="tel:+33600000000">+33 6 00 00 00 00</a>
+        </div>
+      </div>
 
       <form class="contact-form" id="contactForm">
         <div class="form-row">
           <div class="form-field">
             <label for="name">Nom</label>
-            <input type="text" id="name" name="name" required autocomplete="name">
+            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Votre nom">
           </div>
           <div class="form-field">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required autocomplete="email">
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="vous@exemple.com">
           </div>
         </div>
         <div class="form-field">
@@ -96,17 +102,14 @@
         </div>
         <div class="form-field">
           <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+          <textarea id="message" name="message" rows="4" required placeholder="Parlez-nous de votre projet..."></textarea>
         </div>
-        <button type="submit" class="btn btn-primary btn-block">Envoyer ma demande</button>
+        <button type="submit" class="btn-hero btn-hero-block">
+          <span>Envoyer ma demande</span>
+          <span class="btn-hero-arrow">→</span>
+        </button>
         <p class="form-note" id="formNote"></p>
       </form>
-
-      <div class="contact-alt">
-        <a href="mailto:contact@webglowing.fr">contact@webglowing.fr</a>
-        <span>·</span>
-        <a href="tel:+33600000000">+33 6 00 00 00 00</a>
-      </div>
     </div>
   </section>
 
