@@ -151,21 +151,18 @@ h1,h2,h3{font-family:var(--ff-display);font-weight:500;letter-spacing:.01em;colo
   margin-bottom:64px;
 }
 /* ---- Portfolio tab stack (nuances de gris) ---- */
-.tab-stack{margin-top:48px;}
-.tab-item{position:relative;}
-.tab-item + .tab-item{margin-top:-8px;}
+.tab-stack{margin-top:48px;display:flex;flex-direction:column;gap:12px;}
+.tab-item{border-radius:14px;overflow:hidden;}
 .tab-header{
-  display:inline-flex;align-items:center;gap:10px;
-  padding:14px 30px;border:none;cursor:pointer;text-align:left;
+  width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;
+  padding:20px 30px;border:none;cursor:pointer;text-align:left;
   font-family:var(--ff-display);font-size:1.15rem;color:#fff;
-  border-radius:14px 14px 0 0;
-  position:relative;z-index:2;
 }
 .tab-arrow{font-size:.9rem;transition:transform .3s ease;}
 .tab-item.is-open .tab-arrow{transform:rotate(180deg);}
 .tab-band{
-  width:100%;border-radius:0 14px 14px 14px;overflow:hidden;
-  max-height:20px;transition:max-height .5s ease;
+  width:100%;max-height:0;overflow:hidden;
+  transition:max-height .5s ease;
 }
 .tab-item.is-open .tab-band{max-height:460px;}
 .tab-panel-inner{display:flex;gap:28px;align-items:center;padding:12px 30px 28px;}
