@@ -92,13 +92,17 @@
           </div>
         </div>
         <div class="form-field">
-          <label for="budget">Type de projet</label>
-          <select id="budget" name="budget">
-            <option>Site vitrine</option>
-            <option>E-commerce</option>
-            <option>Refonte de site</option>
-            <option>Autre</option>
-          </select>
+          <label>Type de projet</label>
+          <div class="pill-group" role="radiogroup" aria-label="Type de projet">
+            <input type="radio" id="budget-vitrine" name="budget" value="Site vitrine" checked>
+            <label for="budget-vitrine" class="pill-option">Site vitrine</label>
+            <input type="radio" id="budget-ecommerce" name="budget" value="E-commerce">
+            <label for="budget-ecommerce" class="pill-option">E-commerce</label>
+            <input type="radio" id="budget-refonte" name="budget" value="Refonte de site">
+            <label for="budget-refonte" class="pill-option">Refonte de site</label>
+            <input type="radio" id="budget-autre" name="budget" value="Autre">
+            <label for="budget-autre" class="pill-option">Autre</label>
+          </div>
         </div>
         <div class="form-field">
           <label for="message">Message</label>
