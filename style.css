@@ -174,7 +174,7 @@ h1,h2,h3{font-family:var(--ff-display);font-weight:500;letter-spacing:.01em;colo
   will-change:transform;
 }
 .carousel-card img{
-  width:100%;height:100%;object-fit:cover;object-position:center;display:block;
+  width:100%;height:100%;object-fit:contain;object-position:center;display:block;
 }
 .carousel-caption{
   display:flex;flex-direction:column;align-items:center;gap:10px;
