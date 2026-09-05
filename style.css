@@ -341,16 +341,16 @@ body.legal-page{background:#ffffff;}
 
 /* ============ Responsive ============ */
 @media (max-width:960px){
-  .hero{align-items:center;padding:48px 0;}
-  .hero::after{background:linear-gradient(180deg, rgba(18,6,9,.55) 0%, rgba(18,6,9,.4) 50%, rgba(18,6,9,.65) 100%);}
+  .hero{align-items:flex-start;padding:80px 0 48px;}
+  .hero::after{background:linear-gradient(180deg, rgba(18,6,9,.8) 0%, rgba(18,6,9,.45) 45%, rgba(18,6,9,.1) 100%);}
   .hero-inner{text-align:center;margin:0 auto;padding-bottom:0;}
   .hero h1{margin-bottom:26px;}
 }
 @media (max-width:640px){
   .section{padding:80px 0;}
-  .hero{min-height:92vh;padding:40px 0;align-items:center;}
+  .hero{min-height:92vh;padding:64px 0 40px;align-items:flex-start;}
   .hero::before{background-position:center center;}
-  .hero::after{background:linear-gradient(180deg, rgba(18,6,9,.6) 0%, rgba(18,6,9,.42) 50%, rgba(18,6,9,.7) 100%);}
+  .hero::after{background:linear-gradient(180deg, rgba(18,6,9,.85) 0%, rgba(18,6,9,.45) 42%, rgba(18,6,9,.08) 100%);}
   .hero-inner{padding-left:24px;padding-right:24px;padding-bottom:0;max-width:100%;}
   .hero h1{font-size:1.7rem;margin-bottom:22px;}
   .hero-lead{font-size:.78rem;letter-spacing:.1em;}
