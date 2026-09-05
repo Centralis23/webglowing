@@ -170,8 +170,8 @@ h1,h2,h3{font-family:var(--ff-display);font-weight:500;letter-spacing:.01em;colo
   .carousel-card{width:440px;height:280px;margin-top:-140px;margin-left:-220px;border-radius:20px;}
 }
 @media (max-width:640px){
-  .carousel-stage{height:300px;}
-  .carousel-card{width:320px;height:204px;margin-top:-102px;margin-left:-160px;border-radius:16px;}
+  .carousel-stage{height:280px;}
+  .carousel-card{width:250px;height:158px;margin-top:-79px;margin-left:-125px;border-radius:16px;}
   .carousel-caption-name{font-size:1.2rem;}
 }
 

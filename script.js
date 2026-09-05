@@ -28,7 +28,7 @@
 
     const getSpacing = () => {
       const w = window.innerWidth;
-      if (w <= 640) return { x: 150, z: 130, rotate: 24 };
+      if (w <= 640) return { x: 210, z: 150, rotate: 28 };
       if (w <= 960) return { x: 230, z: 190, rotate: 26 };
       return { x: 320, z: 260, rotate: 28 };
     };
