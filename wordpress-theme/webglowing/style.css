@@ -362,7 +362,7 @@ html.intro-lock,html.intro-lock body{overflow:hidden;height:100%;}
 }
 
 /* ============ Legal pages ============ */
-body.legal-page{background:#ffffff;}
+body.legal-page{background:#ffffff !important;}
 .legal-page .logo{color:#6e1f2b;}
 .legal-page .logo span{color:#6e1f2b;opacity:.55;}
 .legal-hero{padding:64px 24px 24px;text-align:center;}
