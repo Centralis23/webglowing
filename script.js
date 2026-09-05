@@ -4,8 +4,14 @@
   /* ---------- Page intro (curtain reveal) ---------- */
   const pageIntro = document.getElementById('pageIntro');
   if (pageIntro && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    window.scrollTo(0, 0);
+    document.documentElement.classList.add('intro-lock');
     setTimeout(() => pageIntro.classList.add('is-ready'), 60);
-    setTimeout(() => pageIntro.classList.add('is-leaving'), 1500);
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+      pageIntro.classList.add('is-leaving');
+      document.documentElement.classList.remove('intro-lock');
+    }, 1500);
     setTimeout(() => pageIntro.classList.add('is-done'), 2650);
   }
 
