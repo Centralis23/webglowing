@@ -67,7 +67,7 @@ h1,h2,h3{font-family:var(--ff-display);font-weight:500;letter-spacing:.01em;colo
   transform:scale(.92);
   transition:opacity .9s ease .15s,transform .9s cubic-bezier(.22,1,.36,1) .15s,letter-spacing .9s cubic-bezier(.22,1,.36,1) .15s;
 }
-.page-intro-logo span{color:var(--accent);}
+.page-intro-logo span{color:var(--white);}
 .page-intro.is-ready .page-intro-logo{
   opacity:1;transform:scale(1);letter-spacing:.18em;
 }
