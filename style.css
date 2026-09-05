@@ -310,19 +310,19 @@ h1,h2,h3{font-family:var(--ff-display);font-weight:500;letter-spacing:.01em;colo
   color:var(--form-ink-dim);font-size:.85rem;white-space:nowrap;
   transition:background .2s ease,border-color .2s ease,color .2s ease;
 }
-.pill-option:hover{border-color:var(--c-black);color:var(--c-black);}
+.pill-option:hover{border-color:var(--c-bg);color:var(--form-ink);}
 .pill-group input[type="radio"]:checked + .pill-option{
-  background:var(--c-black);border-color:var(--c-black);color:var(--c-bg);
+  background:var(--c-bg);border-color:var(--c-bg);color:var(--form-ink);
 }
 .pill-group input[type="radio"]:focus-visible + .pill-option{
-  outline:2px solid var(--c-black);outline-offset:2px;
+  outline:2px solid var(--c-bg);outline-offset:2px;
 }
 .contact-card .btn-hero-block{
   width:100%;justify-content:space-between;padding-left:28px;cursor:pointer;
-  background:var(--c-black);color:var(--c-bg);
+  background:var(--c-bg);color:var(--form-ink);
 }
-.contact-card .btn-hero-block .btn-hero-arrow{background:var(--c-bg);color:var(--c-black);}
-.form-note{font-size:.85rem;color:var(--c-black);min-height:1.2em;}
+.contact-card .btn-hero-block .btn-hero-arrow{background:var(--c-black);color:var(--c-bg);}
+.form-note{font-size:.85rem;color:var(--form-ink);min-height:1.2em;}
 
 @media (max-width:900px){
   .contact-grid{grid-template-columns:1fr;gap:24px;}
