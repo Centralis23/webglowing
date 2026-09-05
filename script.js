@@ -26,14 +26,22 @@
       return diff;
     };
 
+    const getSpacing = () => {
+      const w = window.innerWidth;
+      if (w <= 640) return { x: 150, z: 130, rotate: 24 };
+      if (w <= 960) return { x: 230, z: 190, rotate: 26 };
+      return { x: 320, z: 260, rotate: 28 };
+    };
+
     const layout = () => {
+      const spacing = getSpacing();
       carouselCards.forEach((card) => {
         const i = Number(card.dataset.i);
         const offset = shortestOffset(i);
         const abs = Math.abs(offset);
-        const x = offset * 320;
-        const z = -abs * 260;
-        const rotate = offset * -28;
+        const x = offset * spacing.x;
+        const z = -abs * spacing.z;
+        const rotate = offset * -spacing.rotate;
         const scale = 1 - abs * 0.16;
         const opacity = abs > 1.4 ? 0 : 1 - abs * 0.25;
         card.style.transform = `translateX(${x}px) translateZ(${z}px) rotateY(${rotate}deg) scale(${scale})`;
@@ -65,6 +73,7 @@
 
     layout();
     updateCaption();
+    window.addEventListener('resize', layout);
 
     if (!prefersReducedMotion) {
       setInterval(() => goTo(activeIndex + 1), 3200);
