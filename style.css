@@ -105,7 +105,7 @@ h1,h2,h3{font-family:var(--ff-display);font-weight:500;letter-spacing:.01em;colo
 .hero::before{
   content:'';
   position:absolute;inset:0;z-index:0;
-  background:url('assets/hero-bg.png') center/cover no-repeat;
+  background:url('assets/hero-bg.jpg') center/cover no-repeat;
 }
 .hero::after{
   content:'';
@@ -421,7 +421,7 @@ body.legal-page{background:#ffffff;}
 }
 @media (max-width:640px){
   .section{padding:80px 0;}
-  .hero{min-height:92vh;padding:64px 0 40px;align-items:flex-start;}
+  .hero{min-height:92vh;padding:80px 0 40px;align-items:flex-start;}
   .hero::before{background-position:center center;}
   .hero::after{background:linear-gradient(180deg, rgba(18,6,9,.85) 0%, rgba(18,6,9,.45) 42%, rgba(18,6,9,.08) 100%);}
   .hero-inner{padding-left:24px;padding-right:24px;padding-bottom:0;max-width:100%;}
