@@ -88,7 +88,8 @@
         </div>
 
         <div class="contact-card">
-          <form class="contact-form" id="contactForm">
+          <form class="contact-form" id="contactForm" action="contact-handler.php" method="POST">
+            <input type="text" name="website" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
             <div class="form-row">
               <div class="form-field">
                 <label for="name">Nom</label>

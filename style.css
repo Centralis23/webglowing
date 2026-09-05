@@ -286,6 +286,7 @@ html.intro-lock,html.intro-lock body{overflow:hidden;height:100%;}
   box-shadow:0 30px 70px rgba(0,0,0,.35);
 }
 .contact-form{display:flex;flex-direction:column;gap:20px;}
+.form-honeypot{position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none;}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
 .form-field{display:flex;flex-direction:column;gap:8px;}
 .form-field label{font-size:.75rem;letter-spacing:.05em;color:var(--form-ink-dim);text-transform:uppercase;}

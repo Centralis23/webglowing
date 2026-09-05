@@ -111,14 +111,39 @@
   );
   revealTargets.forEach((el) => observer.observe(el));
 
-  /* ---------- Contact form (static demo) ---------- */
+  /* ---------- Contact form ---------- */
   const contactForm = document.getElementById('contactForm');
   const formNote = document.getElementById('formNote');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      formNote.textContent = 'Merci ! Votre message a bien été noté, nous revenons vers vous rapidement.';
-      contactForm.reset();
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      formNote.style.color = '';
+      formNote.textContent = 'Envoi en cours...';
+
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { Accept: 'application/json' },
+      })
+        .then((res) => res.json().catch(() => ({ success: res.ok })))
+        .then((data) => {
+          if (data.success) {
+            formNote.textContent = 'Merci ! Votre message a bien été envoyé, nous revenons vers vous rapidement.';
+            contactForm.reset();
+          } else {
+            formNote.style.color = '#b3261e';
+            formNote.textContent = data.message || "Une erreur est survenue, merci de réessayer ou de nous écrire directement à contact@webglowing.com.";
+          }
+        })
+        .catch(() => {
+          formNote.style.color = '#b3261e';
+          formNote.textContent = "Une erreur est survenue, merci de réessayer ou de nous écrire directement à contact@webglowing.com.";
+        })
+        .finally(() => {
+          submitBtn.disabled = false;
+        });
     });
   }
 
