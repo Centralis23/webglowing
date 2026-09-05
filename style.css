@@ -68,7 +68,7 @@ h1,h2,h3{font-family:var(--ff-display);font-weight:500;letter-spacing:.01em;colo
   opacity:1;transform:scale(1);
 }
 .page-intro-progress{
-  position:absolute;left:50%;bottom:14%;z-index:1;
+  position:absolute;left:50%;bottom:42%;z-index:1;
   width:min(50vw,260px);height:2px;
   background:rgba(20,18,19,.14);
   transform:translateX(-50%);
