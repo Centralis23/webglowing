@@ -1,6 +1,14 @@
 (() => {
   'use strict';
 
+  /* ---------- Page intro (curtain reveal) ---------- */
+  const pageIntro = document.getElementById('pageIntro');
+  if (pageIntro && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    setTimeout(() => pageIntro.classList.add('is-ready'), 60);
+    setTimeout(() => pageIntro.classList.add('is-leaving'), 1500);
+    setTimeout(() => pageIntro.classList.add('is-done'), 2650);
+  }
+
   /* ---------- Portfolio 3D coverflow ---------- */
   const carouselStage = document.querySelector('.carousel-stage');
   const carousel3d = document.getElementById('portfolioCarousel');
