@@ -72,9 +72,7 @@
   }
 
   /* ---------- Scroll reveal ---------- */
-  const revealTargets = document.querySelectorAll(
-    '.service-card, .portfolio-card, .testimonial, .process-step, .section-title, .section-eyebrow, .about-text, .about-visual'
-  );
+  const revealTargets = document.querySelectorAll('.section-title, .section-eyebrow');
   revealTargets.forEach((el) => el.classList.add('reveal'));
 
   const observer = new IntersectionObserver(
